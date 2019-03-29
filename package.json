@@ -1,0 +1,16 @@
+{
+  "name": "labs-zap-headless-testing",
+  "version": "1.0.0",
+  "description": "Headless tester for ZAP",
+  "main": "index.js",
+  "author": "allthesignals <wilburnforce@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "1.4.1",
+    "dotenv": "7.0.0",
+    "puppeteer": "1.13.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
