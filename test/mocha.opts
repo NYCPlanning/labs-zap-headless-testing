@@ -1,0 +1,9 @@
+# SETUP 
+--file ./test/setup-signin.js
+
+# AUTOMATED TEST CASES
+--file ./test/login/login-test.js
+--file ./test/project/create-project-test.js
+
+# TEARDOWN
+--file ./test/teardown.js
