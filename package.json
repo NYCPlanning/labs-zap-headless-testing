@@ -7,10 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "assert": "1.4.1",
+    "chai": "^4.2.0",
     "dotenv": "7.0.0",
+    "mocha": "^6.2.0",
     "puppeteer": "1.13.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./node_modules/mocha/bin/mocha --delay"
   }
 }
