@@ -74,8 +74,18 @@ describe('[new-topic] tests', function() {
 *Setting `this.timeout(0)` disables Mocha from timing out for all tests under that `describe()`. Set it to another value (in milliseconds), if you know the CRM shouldn't take longer than that amount of time for any operation.
 
 In your topic-specific test, there generally is no need to set up the browser and login to CRM.
-This should already be done through the `./test/setup-signin.js` file.
+This should already be done through the `./test/setup.js` file.
 
 You'll be able to access and interact with the page object through the `page` variable.
 
 For an example, see `./test/login/login-test.js`
+
+If in your tests you need to spin up the browser again, login to CRM, or close the browser, you can make use of the test helpers in `./test/helpers/setup.js` and `./test/helpers/teardown.js`.
+
+At the top of your test file, import them like so:
+
+```
+const setupHelpers = require('../path/to/helpers/setup');
+// or 
+const teardownHelpers = require('../path/to/helpers/teardown');
+```
