@@ -4,7 +4,7 @@
 // for use across all test files under `./tests`.
 // It also signs into CRM based on credentials provided in `.env`. 
 const Puppeteer = require('puppeteer');
-require('dotenv').config();
+const setupHelpers = require('./helpers/setup');
 
 browser = null;
 page = null;
@@ -20,15 +20,8 @@ setTimeout(async function() {
   });
 
   page = await browser.newPage();
-  await page.goto(process.env.ZAP_DOMAIN);
-  await page.type('input', process.env.ZAP_USERNAME);
-  await page.click('[value="Next"]');
-  await page.waitForSelector('#passwordInput');
-  await page.type('#passwordInput', process.env.ZAP_PASS);
-  await page.click('#submitButton');
-  await page.waitForSelector('#idBtn_Back');
-  await page.click('#idBtn_Back');
-  await page.waitForSelector('#marsIFrame');
+  // `await` here is critical, because the helper has async processes
+  await setupHelpers.loginToCrm(page);
 
   run();
 }, 0);

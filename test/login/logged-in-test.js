@@ -1,6 +1,6 @@
 const chai = require('chai');
 
-describe('Login tests', function() {
+describe('Logged in tests', function() {
   // Setting this.timeout(0) disables Mocha from timing out for all
   // tests under that describe().
   // Set it to another value (in milliseconds), if you know the CRM
