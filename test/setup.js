@@ -12,6 +12,7 @@ const mocha = new Mocha();
 
 mocha.addFile('./test/login/logged-in-test.js');
 mocha.addFile('./test/project/create-project-test.js');
+mocha.addFile('./test/teardown.js');
 
 browser = null;
 page = null;
