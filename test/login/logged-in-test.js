@@ -1,4 +1,5 @@
 const chai = require('chai');
+const setupHelpers = require('../helpers/setup');
 
 describe('Logged in tests', function() {
   // Setting this.timeout(0) disables Mocha from timing out for all
@@ -6,6 +7,11 @@ describe('Logged in tests', function() {
   // Set it to another value (in milliseconds), if you know the CRM
   // shouldn't take longer than that amount of time for any operation in this file.
   this.timeout(0);
+
+  it('logs in', async function() {
+      // `await` here is critical, because the helper has async processes
+      await setupHelpers.loginToCrm(page);
+  });
 
   it('allows User see their ID in top right after login', async function() {
     await page.click('#navTabButtonUserInfoLinkId');
