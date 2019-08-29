@@ -10,9 +10,14 @@ const Mocha = require('mocha');
 // Instantiate a Mocha instance.
 const mocha = new Mocha();
 
+// Setup
 mocha.addFile('./test/login/logged-in-test.js');
+
+// Test Cases
 mocha.addFile('./test/project/create-project-test.js');
-mocha.addFile('./test/teardown.js');
+
+// Teardown
+mocha.addFile('./test/teardown/teardown.js');
 
 browser = null;
 page = null;

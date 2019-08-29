@@ -1,9 +1,0 @@
-# SETUP 
---file ./test/setup.js
-
-# AUTOMATED TEST CASES
---file ./test/login/logged-in-test.js
---file ./test/project/create-project-test.js
-
-# TEARDOWN
---file ./test/teardown.js

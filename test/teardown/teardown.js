@@ -1,4 +1,4 @@
-const teardownHelpers = require('./helpers/teardown');
+const teardownHelpers = require('../helpers/teardown');
 
 // This file performs teardown for all tests.
 // It should be called last, as specified in `mocha.opts`
